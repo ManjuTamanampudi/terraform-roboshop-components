@@ -28,9 +28,8 @@ resource "terraform_data" "bootstrap" {
 
   provisioner "remote-exec" {
     inline = [
-      "sleep 60",
       "chmod +x /tmp/bootstrap.sh",
-      "sudo sh /tmp/bootstrap.sh ${var.component} ${var.Environment} ${var.app_version}",
+      "sudo sh /tmp/bootstrap.sh ${var.component} ${var.Environment} ${var.app_version}"
     ]
   }
 
