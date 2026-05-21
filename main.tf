@@ -180,7 +180,7 @@ resource "aws_lb_listener_rule" "main" {
   }
   condition {
     host_header {
-      values = []
+      values = [local.host_header]
 
     }
   }
